@@ -1,51 +1,23 @@
-version: 0.2          
-
+version: 0.2
+            
 phases:
-
   install:
-
     runtime-versions:
-<<<<<<< HEAD
-
       java: corretto17
-
-=======
-      java: openjdk8
->>>>>>> f736b1045aeac260185a567cdffbcce744f00c91
     commands:
-
       - echo install
-
   pre_build:
-
     commands:
-
       - echo pre_build
-
   build:
-
     commands:
-
       - mvn package
-
       - echo build
-
   post_build:
-
     commands:
-
       - echo post_build
 
-
-
 artifacts:
-
   files:
-<<<<<<< HEAD
-
     - '**/*'
-
-    - 'target/github-codedeploy-0.0.1-SNAPSHOT.jar'
-=======
-    - 'target/github-codedeploy-0.0.1-SNAPSHOT.jar'
->>>>>>> f736b1045aeac260185a567cdffbcce744f00c91
+    - target/target/github-codedeploy-0.0.1-SNAPSHOT.jar
