@@ -1,0 +1,21 @@
+version: 0.2
+            
+phases:
+  install:
+    runtime-versions:
+    commands:
+      - echo install
+  pre_build:
+    commands:
+      - echo pre_build
+  build:
+    commands:
+      - mvn package
+      - echo build
+  post_build:
+    commands:
+      - echo post_build
+
+artifacts:
+  files:
+    - target/02-todo-rest-api-h2-0.0.1-SNAPSHOT.jar
