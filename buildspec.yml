@@ -1,22 +1,43 @@
-version: 0.2
-            
+version: 0.2          
+
 phases:
+
   install:
+
     runtime-versions:
+
       java: corretto17
+
     commands:
+
       - echo install
+
   pre_build:
+
     commands:
+
       - echo pre_build
+
   build:
+
     commands:
+
       - mvn package
+
       - echo build
+
   post_build:
+
     commands:
+
       - echo post_build
 
+
+
 artifacts:
+
   files:
-    - target/github-codedeploy-0.0.1-SNAPSHOT.jar
+
+    - '**/*'
+
+    - 'target/github-codedeploy-0.0.1-SNAPSHOT.jar'
